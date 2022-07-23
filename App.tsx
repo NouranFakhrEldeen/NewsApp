@@ -1,60 +1,32 @@
 
 
-import React from 'react';
+import React, {useState} from 'react';
 import AppNavigation from './App/Navigation/AppNavigation'
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
-  useColorScheme,
-  View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import   {themes, ThemeContext } from './App/Utils/themes';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const [theme, setTheme] = useState(themes.light);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  const toggleTheme = () => {
+    
+    setTheme(PrevTheme =>
+      PrevTheme === themes.dark ? themes.light : themes.dark,
+    );
   };
 
   return (
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+
+
+
 <AppNavigation></AppNavigation>
+
+</ThemeContext.Provider >
+
   );
 };
 

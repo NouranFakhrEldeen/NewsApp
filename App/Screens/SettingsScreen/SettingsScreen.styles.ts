@@ -1,16 +1,11 @@
+
 import {StyleSheet} from 'react-native';
 
-export default StyleSheet.create({
-  LanguageButton: {
-    width: 150,
-    height: 70,
-    margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export const styles = (props: any) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: props.background,
+      paddingTop: 15,
+    },
+  });

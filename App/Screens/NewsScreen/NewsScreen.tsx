@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { View,FlatList,SafeAreaView,Image,Text, Pressable} from 'react-native';
+import { FlatList,SafeAreaView,Image,Text, Pressable} from 'react-native';
 import SearchBar from '../../Components/searchbar';
 import styles from './NewsScreen.styles'
 import Routes from '../../Navigation/Routes'
