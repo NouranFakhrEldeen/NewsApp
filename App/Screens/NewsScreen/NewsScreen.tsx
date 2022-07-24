@@ -2,14 +2,14 @@
 import React , {useEffect, useState, useContext} from 'react'
 import { FlatList,SafeAreaView,Image,Text, Pressable , ActivityIndicator} from 'react-native';
 
- import SearchBar from '../../Components/SearchBar/searchBar';
+ import SearchBar from '../../Components/SearchBar/SearchBar';
 import {styles} from './NewsScreen.styles'
 import Routes from '../../Navigation/Routes'
-import {AxiosClient} from '../../services/AxiosClient'
+import {AxiosClient} from '../../Services/AxiosClient'
 import useApiCall from '../../Hooks/useApiCall'
-import {ThemeContext} from '../../Utils/themes';
-import NewsResponse from '../../services/ApiModels/NewsResponse'
-import Article from '../../services/ApiModels/Article'
+import {ThemeContext} from '../../Theme/Themes';
+import NewsResponse from '../../Services/ApiModels/NewsResponse'
+import Article from '../../Services/ApiModels/Article'
 // import {getUIdByDynamicLink} from '../../Utils/deepLink'
 const NewsScreen=(props) =>{
   const {theme} = useContext(ThemeContext);
@@ -65,11 +65,7 @@ const NewsScreen=(props) =>{
       refreshing={isLoading}
     />
      {isLoading && <ActivityIndicator />}
-      {isError && (
-        <Text >
-          an error has occured 
-        </Text>
-      )}
+   
   </SafeAreaView>
   )
 }

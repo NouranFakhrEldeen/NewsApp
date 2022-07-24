@@ -2,7 +2,7 @@ import {Image, ScrollView, Text, View, Button} from 'react-native';
 import React, {useContext} from 'react';
 import {styles} from './NewsDetailsScreen.styles';
 import {NativeStackHeaderProps} from '@react-navigation/native-stack';
-import {ThemeContext} from '../../Utils/themes';
+import {ThemeContext} from '../../Theme/Themes';
 
 function NewsDetailsScreen({route, navigation}: NativeStackHeaderProps) {
   const newsObject: any = route.params.response;

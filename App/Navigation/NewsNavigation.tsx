@@ -4,7 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import NewsDetailsScreen from '../Screens/NewsDetailsScreen/NewsDetailsScreen';
 import Routes from './Routes';
-import {ThemeContext} from '../Utils/themes';
+import {ThemeContext} from '../Theme/Themes';
 import NewsScreen from '../Screens/NewsScreen/NewsScreen';
 const StackNavigator = createNativeStackNavigator();
 import {useTranslation} from 'react-i18next';

@@ -8,9 +8,9 @@ import SettingsScreen from '../Screens/SettingsScreen/SettingsScreen';
 import NewsNavigation from './NewsNavigation';
 import Routes from './Routes';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
- import {ThemeContext, themes} from '../Utils/themes';
+ import {ThemeContext, themes} from '../Theme/Themes';
 import {useTranslation} from 'react-i18next';
-import linking from './linking'
+import linking from './Linking'
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {

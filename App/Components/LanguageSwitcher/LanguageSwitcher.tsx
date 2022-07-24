@@ -1,10 +1,10 @@
 import {StyleSheet, Switch, Text, View} from 'react-native';
 import React, {useContext} from 'react';
 import {styles} from './LanguageSwitcherStyles';
-import {ThemeContext, themes} from '../../Utils/themes';
+import {ThemeContext, themes} from '../../Theme/Themes';
 import {useTranslation} from 'react-i18next';
 import I18n from '../../I18n/i18next';
-
+import Colors from '../../Theme/Colors'
 const LanguageSwitcher = () => {
   const {i18n} = useTranslation();
   const {theme} = useContext(ThemeContext);
@@ -20,8 +20,8 @@ const LanguageSwitcher = () => {
               ? I18n.changeLanguage('de')
               : I18n.changeLanguage('en');
           }}
-          trackColor={{false: '#767577', true: '#81b0ff'}}
-          thumbColor={theme != themes.dark ? '#f5dd4b' : '#f4f3f4'}
+          trackColor={{false: Colors.DarkGrey, true: Colors.blueGrey}}
+          thumbColor={theme != themes.dark ? Colors.lightYellow : Colors.lightGrey}
         />
       </View>
     </View>

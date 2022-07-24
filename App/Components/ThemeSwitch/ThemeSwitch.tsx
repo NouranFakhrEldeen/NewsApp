@@ -1,9 +1,9 @@
 import {StyleSheet, Switch, Text, View} from 'react-native';
 import React, {useContext} from 'react';
-import {ThemeContext, themes} from '../../Utils/themes';
+import {ThemeContext, themes} from '../../Theme/Themes';
 import {styles} from './ThemeSwitchStyles';
 import {useTranslation} from 'react-i18next';
-
+import Colors from '../../Theme/Colors'
 const ThemeSwitch = () => {
   const {t} = useTranslation();
   const {theme, toggleTheme} = useContext(ThemeContext);
@@ -15,10 +15,10 @@ const ThemeSwitch = () => {
       </Text>
       <View style={styles(theme).switchContainer}>
         <Switch
-          value={theme == themes.dark ? true : false}
+          value={theme == themes.light ? true : false}
           onValueChange={toggleTheme}
-          trackColor={{false: '#767577', true: '#81b0ff'}}
-          thumbColor={theme != themes.dark ? '#f5dd4b' : '#f4f3f4'}
+          trackColor={{false: Colors.DarkGrey, true: Colors.blueGrey}}
+          thumbColor={theme != themes.dark ? Colors.lightYellow : Colors.lightGrey}
         />
       </View>
     </View>

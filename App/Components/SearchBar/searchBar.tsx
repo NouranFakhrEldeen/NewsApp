@@ -37,8 +37,8 @@
 import {TextInput, View} from 'react-native';
 import React, {useContext} from 'react';
 
-import {ThemeContext} from '../../Utils/themes';
-import {styles} from './searchBar.style';
+import {ThemeContext} from '../../Theme/Themes';
+import {styles} from './SearchBar.style';
 
 import {useTranslation} from 'react-i18next';
 type  SearchFieldProps= {

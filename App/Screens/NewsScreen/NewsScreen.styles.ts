@@ -1,15 +1,10 @@
 import { StyleSheet } from 'react-native'
 export const styles = (props: any) =>
   StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop: 0,
-      borderRadius: 6,
-      backgroundColor: props.background,
-      
-    },
+
     newsContainer: {
       padding: 10,
+      flex: 1,
       borderRadius: 6,
       backgroundColor: props.background,
       borderColor: props.text,
@@ -19,6 +14,7 @@ export const styles = (props: any) =>
       padding: 20,
       marginVertical: 8,
       marginHorizontal: 16,
+      backgroundColor: props.background,
     },
     title: {
       fontSize: 16,
