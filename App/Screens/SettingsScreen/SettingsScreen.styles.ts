@@ -6,6 +6,8 @@ export const styles = (props: any) =>
     container: {
       flex: 1,
       backgroundColor: props.background,
-      paddingTop: 15,
+
+        alignItems:'center',
+        justifyContent:"center",
     },
   });

@@ -6,5 +6,8 @@ export default {
   newsDetails: 'News Details',
   settings: 'Settings',
   language: 'English',
-  searchPlaceholder: 'Search for articles',
+  searchPlaceholder: 'Search...',
+  title:'Title',
+  description:'Description',
+  publishedAt:'Published At',
 };

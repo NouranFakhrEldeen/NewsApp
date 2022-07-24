@@ -1,4 +1,5 @@
 export default {
+  
   newsList: 'Nachrichtenliste',
   news: 'Nachrichten',
   light: 'Hell',
@@ -6,5 +7,8 @@ export default {
   newsDetails: 'Nachrichtendetails',
   settings: 'Einstellungen',
   language: 'Deutsch',
-  searchPlaceholder: 'Suchen Sie nach Artikeln',
+  searchPlaceholder: 'Suche...',
+  title:'Titel',
+  description:'Beschreibung',
+  publishedAt:'Veröffentlicht am',
 };
