@@ -10,14 +10,14 @@ import Routes from './Routes';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
  import {ThemeContext, themes} from '../Utils/themes';
 import {useTranslation} from 'react-i18next';
-
+import linking from './linking'
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
   const {t} = useTranslation();
   const {theme} = useContext(ThemeContext);
   return (
-<NavigationContainer>
+<NavigationContainer linking={linking}>
       <Tab.Navigator screenOptions={() => ({
         headerShown: false,
         tabBarStyle: {

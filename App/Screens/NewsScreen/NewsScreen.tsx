@@ -10,12 +10,21 @@ import useApiCall from '../../Hooks/useApiCall'
 import {ThemeContext} from '../../Utils/themes';
 import NewsResponse from '../../services/ApiModels/NewsResponse'
 import Article from '../../services/ApiModels/Article'
-
+// import {getUIdByDynamicLink} from '../../Utils/deepLink'
 const NewsScreen=(props) =>{
   const {theme} = useContext(ThemeContext);
   const {responseData, isLoading, isError, refresh} = useApiCall(() => AxiosClient<NewsResponse>());
   const [filteredList, setFilteredList] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+
+  // useEffect(() => {
+  //   async function invokeDeepLink() {
+  //     const id = await getUIdByDynamicLink();
+  //     if (id) props.navigation.navigate(Routes.NewsDetails, {id: id});
+  //   }
+  //   invokeDeepLink();
+  // }, []);
+
 
 
   useEffect(() => {
